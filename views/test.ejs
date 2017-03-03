@@ -1,0 +1,32 @@
+<html>
+	<head></head>
+
+
+	<body>
+	<select id="mySelect" name="values">
+  <option>0</option>
+  <option>1</option>
+  <option>2</option>
+</select>
+<div id="myDiv">
+  <p>Select 0 to show me, otherwise I'm invisible!</p>
+</div>
+
+	<script>
+		var myDiv = document.getElementById("myDiv");
+        document.getElementById("mySelect").onchange = function(){
+        myDiv.style.display = (this.selectedIndex == 0) ? "block" : "none";
+}
+	</script>
+
+	</body>
+</html>		
+
+
+
+
+
+
+
+
+
