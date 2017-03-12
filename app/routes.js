@@ -346,6 +346,10 @@ router.post('/portfoliocreated', upload.any(), function(req, res) {
 	}
 
   }else{
+       if(req.files[0]==undefined){
+        req.flash('error_msg', 'Please upload screenshot');
+        res.redirect('/createportfolio');
+       }
   		var newImage = new Image();
 	newImage.img.data = fs.readFileSync(req.files[0].path);
     newImage.img.contentType = 'image/jpeg';
